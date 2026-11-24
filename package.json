@@ -1,0 +1,18 @@
+{
+  "name": "sq-san-marcos",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Prototipo de movilidad eléctrica para el campus de la UNMSM",
+  "scripts": {
+    "serve": "http-server . -p 4173 -c-1",
+    "pretest:e2e": "node -e \"require('fs').mkdirSync('artifacts',{recursive:true})\"",
+    "test:e2e": "playwright test",
+    "test:e2e:live": "cross-env BASE_URL=https://tejedasebastian.github.io/SQ_SAN-MARCOS/ playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "cross-env": "^10.1.0",
+    "http-server": "^14.1.1"
+  }
+}

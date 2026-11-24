@@ -1,83 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" charset="UTF-8">
-    <title>SQ SAN MARCOS</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQ San Marcos — Movilidad eléctrica en el campus</title>
+  <meta name="description" content="Scooters eléctricos para moverte por el campus de la UNMSM. S/ 1 por media hora, cinco paraderos y reserva simulada en menos de un minuto.">
+  <meta name="theme-color" content="#0a1f1a">
+  <link rel="canonical" href="https://tejedasebastian.github.io/SQ_SAN-MARCOS/">
+  <meta property="og:title" content="SQ San Marcos — Movilidad eléctrica en el campus">
+  <meta property="og:description" content="Llega a tu clase sin correr (ni sudar). Prototipo académico de scooters eléctricos para el campus de la UNMSM.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tejedasebastian.github.io/SQ_SAN-MARCOS/">
+  <meta property="og:image" content="https://tejedasebastian.github.io/SQ_SAN-MARCOS/img/sco_ter2.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    <header>
-        <ul>
-            <li><h1>¡Bienvenido a SQ SAN MARCOS!</h1></li>
-        </ul>
-    </header>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SQ San Marcos, volver al inicio">
+        <span class="brand-mark" aria-hidden="true">SQ</span>
+        <span class="brand-text">San Marcos <span>Movilidad eléctrica</span></span>
+      </a>
 
- <main>
-    <div class="Mensaje_bienvenida">
-        <p>
-            Descubre la movilidad del futuro en tu campus universitario con nuestros scooters eléctricos.
-        </p>
-      <img src="img/sco_ter3.jpg" alt="Bienvenido a sq" style="width: 400px;">
-        <p>
-            ¿Listo para empezar? Utiliza un scooter ahora y disfruta de un viaje emocionante en minutos.
-        </p>
-            <a href="#productos" class="button-explora">Explora más</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Abrir menú</span>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
+        <a href="#por-que">¿Por qué SQ?</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#scooters">Scooters</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm" href="#reserva">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Movilidad eléctrica · Campus UNMSM</p>
+          <h1 id="hero-title">Llega a tu clase <span class="highlight">sin correr</span> (ni sudar).</h1>
+          <p class="lead">Scooters eléctricos en los paraderos del campus. S/ 1 por media hora, sin apps complicadas y sin llegar tarde.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reserva">Reservar mi scooter</a>
+            <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>S/ 1</dt>
+              <dd>por 30 min</dd>
+            </div>
+            <div>
+              <dt>40 km/h</dt>
+              <dd>velocidad máx.</dd>
+            </div>
+            <div>
+              <dt>4 h</dt>
+              <dd>de autonomía</dd>
+            </div>
+          </dl>
         </div>
-    
 
-    </main>
+        <div class="hero-visual">
+          <div class="hero-blob" aria-hidden="true"></div>
+          <img class="hero-img" src="img/hero-scooter.webp" alt="Scooter eléctrico blanco y azul de SQ San Marcos" width="1200" height="1200" fetchpriority="high">
+          <div class="float-card float-card--top">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Disponible ahora</strong>
+              <small>Paradero Puerta 1</small>
+            </div>
+          </div>
+          <div class="float-card float-card--bottom">
+            <strong>Reserva en 30 s</strong>
+            <small>Sin filas, sin papeleo</small>
+          </div>
+        </div>
+      </div>
 
-    <section id="productos">
-        <h2>Explora Nuestros Scooters</h2>
-        <p>En SQ San Marcos, ofrecemos la posibilidad de movilizarte con un scooter eléctrico moderno y eficiente para tu comodidad y movilidad en el campus universitario.</p>
-        <!-- Aquí puedes listar los scooters disponibles y sus características -->
-        <ul>
-            <li>
-                <img src="img/sco_ter2.jpg" alt="Scooter Modelo 1">
-                <h3>Scooter Modelo 1</h3>
-                <p>Velocidad máxima: 40 km/h</p>
-                <p>Autonomía de la batería: 4horas </p>
-            </li>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>S/ 1 por 30 min</span><span>5 paraderos</span><span>100% eléctrico</span><span>Hecho para el campus</span>
+          <span>S/ 1 por 30 min</span><span>5 paraderos</span><span>100% eléctrico</span><span>Hecho para el campus</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="por-que" aria-labelledby="por-que-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">La diferencia</p>
+          <h2 id="por-que-title">Tu campus, a la velocidad de tus ganas.</h2>
+          <p>No es un bus, no es una bicicleta y no es caminar con la mochila llena. Es la forma más simple de moverte entre pabellones.</p>
+        </div>
+
+        <div class="features">
+          <article class="feature-card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3>Llegas en minutos</h3>
+            <p>Estaciones en los paraderos del burrito interno. Bajas del burrito, subes al scooter y sigues tu ruta.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+            </div>
+            <h3>Cuesta menos que un café</h3>
+            <p>S/ 1 por media hora. Sin membresías, sin depósitos y sin letra chica.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21c4 0 7-2.7 7-6.4 0-4.4-4.2-7.6-7-10.6-2.8 3-7 6.2-7 10.6C5 18.3 8 21 12 21Z"></path>
+                <path d="M12 21v-6"></path>
+              </svg>
+            </div>
+            <h3>Cero emisiones</h3>
+            <p>100% eléctrico. Más silencio en el campus y menos humo en el aire que respiras entre clases.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="como-funciona" aria-labelledby="como-funciona-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Así de simple</p>
+          <h2 id="como-funciona-title">Cuatro pasos. Cero complicaciones.</h2>
+          <p>No necesitas descargar nada ni dejar tu DNI en garantía. Todo pasa en el paradero.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Elige tu paradero</h3>
+            <p>Mira las estaciones del campus y escoge la que está más cerca de tu ruta.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Reserva tu horario</h3>
+            <p>Selecciona fecha, hora y duración. Te damos un código de recojo al instante.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Muestra tu código</h3>
+            <p>El personal del paradero valida tu reserva y te entrega el scooter listo para rodar.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3>Devuélvelo donde quieras</h3>
+            <p>Puedes dejarlo en cualquier estación SQ del campus. Sin vueltas ni penalidades.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="scooters" aria-labelledby="scooters-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">La flota</p>
+          <h2 id="scooters-title">Un scooter para cada prisa.</h2>
+          <p>Tres perfiles, la misma idea: moverte rápido, seguro y sin gastar de más.</p>
+        </div>
+
+        <div class="scooter-grid">
+          <article class="scooter-card reveal">
+            <div class="scooter-media">
+              <img src="img/scooter-urban.webp" alt="Scooter SQ Urban negro de perfil" width="641" height="890" loading="lazy">
+            </div>
+            <div class="scooter-body">
+              <span class="tag">Día a día</span>
+              <h3>SQ Urban</h3>
+              <p>El equilibrio perfecto entre tamaño, autonomía y precio. Ideal para ir de una facultad a otra.</p>
+              <ul class="specs">
+                <li><strong>25 km/h</strong><span>velocidad</span></li>
+                <li><strong>30 km</strong><span>autonomía</span></li>
+                <li><strong>2 h</strong><span>carga</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="scooter-card scooter-card--featured reveal">
+            <div class="scooter-media">
+              <img src="img/hero-scooter.webp" alt="Scooter SQ Campus blanco y azul" width="895" height="1200" loading="lazy">
+            </div>
+            <div class="scooter-body">
+              <span class="tag tag--lime">Más pedido</span>
+              <h3>SQ Campus</h3>
+              <p>El todo terreno del campus. Más autonomía y una canasta para la laptop y los apuntes.</p>
+              <ul class="specs">
+                <li><strong>40 km/h</strong><span>velocidad</span></li>
+                <li><strong>45 km</strong><span>autonomía</span></li>
+                <li><strong>4 h</strong><span>carga</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="scooter-card reveal">
+            <div class="scooter-media scooter-media--night">
+              <img src="img/scooter-night.webp" alt="Scooter SQ Night con luces LED sobre fondo rosado" width="846" height="814" loading="lazy">
+            </div>
+            <div class="scooter-body">
+              <span class="tag">Turno noche</span>
+              <h3>SQ Night</h3>
+              <p>Para clases que terminan tarde. Luces LED, freno reforzado y una postura más estable.</p>
+              <ul class="specs">
+                <li><strong>20 km/h</strong><span>velocidad</span></li>
+                <li><strong>25 km</strong><span>autonomía</span></li>
+                <li><strong>3 h</strong><span>carga</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">Especificaciones y tarifas del prototipo académico. No corresponden a un servicio comercial real.</p>
+      </div>
+    </section>
+
+    <section class="section section--reserve" id="reserva" aria-labelledby="reserva-title">
+      <div class="container reserve-grid">
+        <div class="reserve-copy">
+          <p class="eyebrow">Reserva simulada</p>
+          <h2 id="reserva-title">Tu próximo viaje empieza aquí.</h2>
+          <p>Elige paradero, fecha y duración. El total se calcula al instante y te damos un código de recojo.</p>
+
+          <ul class="check-list">
+            <li>Sin registro ni descarga de apps.</li>
+            <li>Confirmación inmediata en pantalla.</li>
+            <li>Puedes cancelar hasta una hora antes.</li>
+          </ul>
+
+          <div class="prototype-note">
+            <strong>Prototipo académico.</strong> Este formulario no procesa pagos ni reservas reales. Sirve para demostrar el flujo de reserva.
+          </div>
+        </div>
+
+        <div class="reserve-card">
+          <form id="reservation-form" novalidate>
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Sebastián Tejeda" aria-describedby="name-error">
+              <p class="error" id="name-error" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="station">Paradero</label>
+              <select id="station" name="station" aria-describedby="station-error">
+                <option value="">Selecciona un paradero</option>
+                <option value="puerta-1">Puerta 1 — Ciudad Universitaria</option>
+                <option value="biblioteca">Biblioteca Central</option>
+                <option value="fisi">FISI — Ingeniería de Sistemas</option>
+                <option value="comedor">Comedor Universitario</option>
+                <option value="estadio">Estadio UNMSM</option>
+              </select>
+              <p class="error" id="station-error" role="alert"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="date">Fecha</label>
+                <input id="date" name="date" type="date" aria-describedby="date-error">
+                <p class="error" id="date-error" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="time">Hora</label>
+                <select id="time" name="time" aria-describedby="time-error">
+                  <option value="">Elige</option>
+                  <option value="07:00">07:00</option>
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                </select>
+                <p class="error" id="time-error" role="alert"></p>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>Duración</legend>
+              <div class="duration-options">
+                <label class="duration">
+                  <input type="radio" name="duration" value="30" checked>
+                  <span>30 min <strong>S/ 1.00</strong></span>
+                </label>
+                <label class="duration">
+                  <input type="radio" name="duration" value="60">
+                  <span>1 h <strong>S/ 1.50</strong></span>
+                </label>
+                <label class="duration">
+                  <input type="radio" name="duration" value="120">
+                  <span>2 h <strong>S/ 2.50</strong></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="total" aria-live="polite">
+              <span>Total estimado</span>
+              <strong id="total">S/ 1.00</strong>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Confirmar reserva</button>
+            <p class="form-note">Demostración: no se procesan pagos ni reservas reales.</p>
+          </form>
+
+          <div id="confirmation" class="confirmation" hidden aria-live="polite">
+            <div class="confirmation-icon" aria-hidden="true">✓</div>
+            <p class="eyebrow">Reserva confirmada</p>
+            <h3>Nos vemos en el paradero.</h3>
+            <p class="confirmation-code">Código <strong id="confirmation-code">SQ-0000</strong></p>
+            <dl class="confirmation-summary" id="confirmation-summary"></dl>
+            <button type="button" id="new-reservation" class="btn btn-ghost btn-block">Hacer otra reserva</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="section-head section-head--left">
+          <p class="eyebrow">Dudas frecuentes</p>
+          <h2 id="faq-title">Lo que todos preguntan antes de subirse.</h2>
+          <p>Si tu duda no está aquí, abre un issue en el repositorio y la respondemos.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>¿Dónde encuentro los scooters?</summary>
+            <p>En los paraderos del burrito interno: Puerta 1, Biblioteca Central, FISI, Comedor Universitario y Estadio UNMSM.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta?</summary>
+            <p>S/ 1 por los primeros 30 minutos y S/ 0.50 por cada 30 minutos adicionales. El prototipo permite reservas de hasta 2 horas.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si se acaba la batería?</summary>
+            <p>Cada scooter tiene autonomía para varias vueltas al campus. Si la batería baja del 15%, el scooter se bloquea y el personal del paradero lo reemplaza.</p>
+          </details>
+          <details>
+            <summary>¿Puedo salir del campus?</summary>
+            <p>No. El prototipo está pensado solo para el campus de la UNMSM. Salir del perímetro apaga el motor por seguridad.</p>
+          </details>
+          <details>
+            <summary>¿Cómo reporto una falla?</summary>
+            <p>Avisa al personal del paradero o abre un issue en el repositorio del proyecto con una foto y el código del scooter.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="#top" aria-label="SQ San Marcos, volver al inicio">
+          <span class="brand-mark" aria-hidden="true">SQ</span>
+          <span class="brand-text">San Marcos <span>Movilidad eléctrica</span></span>
+        </a>
+        <p class="footer-note">Proyecto académico FISI-UNMSM. No es un servicio real de alquiler de scooters.</p>
+      </div>
+
+      <nav aria-label="Enlaces del sitio">
+        <h2 class="footer-title">Sitio</h2>
+        <ul class="footer-links">
+          <li><a href="#por-que">¿Por qué SQ?</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#scooters">Scooters</a></li>
+          <li><a href="#reserva">Reservar</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
-        <a href="#alquiler" class="button-alquilar">Alquilar Ahora</a>
-    </section>
-    <section id="como-funciona">
-        <h2>¿Cómo Funciona?</h2>
-        <p>Utilizar nuestros scooters eléctricos es simple y conveniente. Aquí te explicamos cómo:</p>
-    
-      <ol>
-        <li>Encuentra nuestro equipo en los paraderos del burrito interno de la universidad.</li>
-        <li>Paga solo 1 sol peruano por el servicio de alquiler.</li>
-        <li>Informa a nuestro personal a dónde te diriges con el scooter.</li>
-        <li>Recibe tu scooter eléctrico y comienza tu viaje.</li>
-    </ol>
-    
-     <p>¡Es así de fácil! Nuestro objetivo es proporcionarte una forma rápida y eficiente de desplazarte por el campus universitario. Si tienes alguna pregunta o necesitas asistencia, no dudes en preguntar a nuestro personal en los paraderos.</p>
-    </section>
+      </nav>
 
-    <section id="acerca-de-nosotros">
-        <h2>Acerca de Nosotros</h2>
-        <p>Somos SQ SAN MARCOS, una empresa comprometida con la movilidad sostenible y eficiente en tu campus universitario. Nuestra misión es proporcionar una alternativa de transporte ecológica y accesible para la comunidad estudiantil.</p>
-        <p>¡Únete a nosotros en nuestro viaje hacia un campus más sostenible y con mayor movilidad!</p>
-    </section>
-
-    <footer>
-        <ul>
-            <li class="twitter">
-                Twitter:
-                <a href="" target="_blank" rel="noopener noreferrer">@SQ_SANMARCOS</a>
-            </li>
-            <li class="facebook">
-                Facebook:
-                <a href="" target="_blank" rel="noopener noreferrer">SQ SAN MARCOS, MOVILIDAD ALTERNATIVA</a>
-            </li>
+      <div>
+        <h2 class="footer-title">Proyecto</h2>
+        <ul class="footer-links">
+          <li><a href="https://github.com/tejedasebastian/SQ_SAN-MARCOS" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+          <li><a href="https://tejedasebastian.github.io/SQ_SAN-MARCOS/" target="_blank" rel="noopener noreferrer">Sitio publicado</a></li>
+          <li><a href="https://github.com/tejedasebastian/SQ_SAN-MARCOS/issues" target="_blank" rel="noopener noreferrer">Reportar una falla</a></li>
         </ul>
-        <ul>
-            <li class="website">
-                Website:
-                <a href="">
-            </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> SQ San Marcos. Hecho con HTML, CSS y JavaScript.</p>
+      <p>Prototipo visual · Sin pagos reales</p>
+    </div>
+  </footer>
+</body>
+</html>
