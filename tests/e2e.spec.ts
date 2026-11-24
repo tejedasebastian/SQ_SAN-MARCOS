@@ -16,7 +16,7 @@ async function fillValidReservation(page: Page) {
 }
 
 test("reserva de 2 horas: errores, cálculo y confirmación", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Llega a tu clase");
 
   await page.getByRole("link", { name: "Reservar mi scooter" }).click();
@@ -49,7 +49,7 @@ test("reserva de 2 horas: errores, cálculo y confirmación", async ({ page }) =
 });
 
 test("rechaza una fecha pasada y permite corregirla", async ({ page }) => {
-  await page.goto("/#reserva");
+  await page.goto("./#reserva");
   await page.getByLabel("Nombre").fill("Ana Quispe");
   await page.getByLabel("Paradero").selectOption("fisi");
   await page.getByLabel("Hora").selectOption("08:00");
@@ -72,7 +72,7 @@ test("móvil: menú, navegación, sin overflow y assets cargados", async ({ page
   });
 
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/");
+  await page.goto("./");
 
   await page.getByRole("button", { name: "Abrir menú" }).click();
   await expect(page.locator("#site-nav")).toBeVisible();
@@ -96,7 +96,7 @@ test("móvil: menú, navegación, sin overflow y assets cargados", async ({ page
 });
 
 test("accesibilidad básica y enlaces internos", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
 
   await expect(page.locator("h1")).toHaveCount(1);
 
